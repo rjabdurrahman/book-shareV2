@@ -15,23 +15,26 @@ export class Register extends Component {
     }
 
     handleChange(event) {
-        this.setState({[event.target.name]: event.target.value});
+        this.setState({ [event.target.name]: event.target.value });
     }
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log(this.state);
+        if (this.state.password !== this.state.confirmPassword)
+            console.log(this.state);
+        else
+            console.log('Password Doesn\' Matched')
     }
 
     render() {
         return (
             <div className="register-div">
                 <PrimaryNav></PrimaryNav>
-                <form onSubmit={this.handleSubmit} className="section-book">
+                <section className="section-book">
                     <div className="row">
                         <div className="book">
                             <div className="book__form">
-                                <form action className="form">
+                                <form onSubmit={this.handleSubmit} className="form">
                                     <div className=" u-margin-bottom-medium">
                                         <h2 className="heading-secondary">
                                             Start sign up now
@@ -54,8 +57,8 @@ export class Register extends Component {
                                         <label htmlFor="password" className="form__label">Password</label>
                                     </div>
                                     <div className="form__group">
-                                        <input type="password" className="form__input" placeholder="Confirm Password" name="confirmPassword" value={this.state.confirmPassword} onChange={this.handleChange} required />
-                                        <label htmlFor="password" className="form__label"> Confirm Password</label>
+                                        <input type="password" className="form__input" style={this.state.confirmPassword.length > 0 && this.state.password !== this.state.confirmPassword ? { borderBottomColor: 'red' } : { display: 'block' }} placeholder="Confirm Password" name="confirmPassword" value={this.state.confirmPassword} onChange={this.handleChange} required />
+                                        <label htmlFor="password" className="form__label">Confirm Password</label>
                                     </div>
                                     <div className="form__group">
                                         <input type="submit" className="btn btn--green" value="Sign UP  →" />
@@ -64,7 +67,7 @@ export class Register extends Component {
                             </div>
                         </div>
                     </div>
-                </form>
+                </section>
 
             </div>
         )
