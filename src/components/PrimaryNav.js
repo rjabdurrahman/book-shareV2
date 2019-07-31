@@ -14,14 +14,17 @@ export class PrimaryNav extends Component {
                 <div className="primary-nav__button">
                     <ul>
                         <li>
+                            <Link to="/" className="btn1 btn2--header">Home</Link>
+                        </li>
+                        <li>
                             <Link to="/signup" className="btn1 btn2--header">Sign Up</Link>
                         </li>
                         <li>
                             <Link to="/login" className="btn1 btn2--header">Sign In</Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="/profile" className="btn1 btn2--header">Profile</Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>

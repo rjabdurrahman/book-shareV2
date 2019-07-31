@@ -45,7 +45,7 @@ export class Register extends Component {
                                         <a href="data.html" className=" btn-text">Sign In with Google →</a>
                                     </div>
                                     <div className="form__group">
-                                        <input type="text" className="form__input" placeholder="Full Name" name="fullName" value={this.state.fullName} onChange={this.handleChange} required />
+                                        <input type="text" className="form__input" placeholder="Full Name" name="fullName" value={this.state.fullName} onChange={this.handleChange} autoFocus required />
                                         <label htmlFor="name" className="form__label">Full Name</label>
                                     </div>
                                     <div className="form__group">
