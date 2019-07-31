@@ -20,10 +20,10 @@ export class Register extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        if (this.state.password !== this.state.confirmPassword)
+        if (this.state.password === this.state.confirmPassword)
             console.log(this.state);
         else
-            console.log('Password Doesn\' Matched')
+            alert('Password Doesn\' Matched')
     }
 
     render() {
