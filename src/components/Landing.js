@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
+// import MainNav from '../components/MainNav'
+import BookList from '../components/BookList';
 
 export class Landing extends Component {
     render() {
@@ -25,6 +27,8 @@ export class Landing extends Component {
                         <div className="heading-text__sub">― Marcus Tullius Cicero</div>
                     </div>
                 </header>
+                {/* <MainNav></MainNav> */}
+                <BookList></BookList>
             </div>
         )
     }
