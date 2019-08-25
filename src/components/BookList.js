@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './BookList.css';
 import axios from 'axios';
-import link from 'restApi';
+import link from '../restApi';
 
 export class BookList extends Component {
     constructor(props) {
