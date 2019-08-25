@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './BookList.css';
 import axios from 'axios';
+import link from 'restApi';
 
 export class BookList extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ export class BookList extends Component {
     }
 
     componentWillMount() {
-        axios.get('http://localhost:5000/api/add-book')
+        axios.get(link + '/api/add-book')
             .then(res => this.setState({ bookList: res.data }))
             .catch(err => console.log(err));
     }
